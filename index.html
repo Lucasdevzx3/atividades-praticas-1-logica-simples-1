@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    
+    
+</head>
+<body>
+  <h1> Atividades pratica 1 logica simples 1</h1>
+   
+   <script>
+    /* Desenvolva um algoritmo que armazene o valor 10 em uma variável
+A e o valor 20 em uma variável B. A seguir (utilizando apenas
+atribuições entre variáveis) troque os seus conteúdos fazendo com
+que o valor que está em A passe para B e vice-versa. Ao final,
+escrever os valores que ficaram armazenados nas variáveis. */
+
+  let A = 10;
+    let B = 20;
+    let aux = A;
+    A = B;
+    B = aux;
+    console.log(A);
+    console.log(B);
+
+    /*Desenvolva um algoritmo para ler o número total de eleitores de um
+município, o número de votos brancos, nulos e válidos. Calcular e
+escrever o percentual que cada um representa em relação ao total
+de eleitores. */
+  let eleitores = 1000;
+  let brancos = 150;
+  let nulos = 50;
+  let validos = 800;
+  let percentualBrancos = (brancos / eleitores) * 100;
+  let percentualNulos = (nulos / eleitores) * 100;
+  let percentualValidos = (validos / eleitores) * 100;
+  console.log("Percentual de votos brancos: " + percentualBrancos + "%");
+  console.log("Percentual de votos nulos: " + percentualNulos + "%");
+  console.log("Percentual de votos válidos: " + percentualValidos + "%");
+
+  /* O custo de um carro novo ao consumidor é a soma do custo de
+fábrica com a porcentagem do distribuidor e dos impostos
+(aplicados ao custo de fábrica). Supondo que o percentual do
+distribuidor seja de 28% e os impostos de 45%, escrever um
+algoritmo para ler o custo de fábrica de um carro,calcular e escrever
+o custo final ao consumidor.*/
+  let custoFabrica = 10000;
+  let percentualDistribuidor = 0.28;
+  let percentualImpostos = 0.45;
+  let custoFinal = custoFabrica + (custoFabrica * percentualDistribuidor) + (custoFabrica * percentualImpostos);
+  console.log("Custo final ao consumidor: R$" + custoFinal);
+
+  /* Uma revendedora de carros usados paga a seus funcionários
+vendedores um salário fixo por mês, mais uma comissão também
+fixa para cada carro vendido e mais 5% do valor das vendas por ele
+efetuadas. Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que
+ele recebe por carro vendido. Calcule e escreva o salário final do
+vendedor.*/
+  let numeroCarrosVendidos = 10;
+  let valorVendas = 50000;
+  let salarioFixo = 2000;
+  let comissaoPorCarro = 1000;
+  let salarioFinal = salarioFixo + (numeroCarrosVendidos * comissaoPorCarro) + (valorVendas * 0.05);
+  console.log("Salário final do vendedor: R$" + salarioFinal);
+
+  /*Escreva um algoritmo para ler uma temperatura em graus Celsius,
+calcular e escrever o valor correspondente em graus Fahrenheit. */
+  let temperaturaCelsius = 25;
+  let temperaturaFahrenheit = (temperaturaCelsius * 9/5) + 32;
+  console.log(temperaturaCelsius + " graus Celsius equivale a " + temperaturaFahrenheit + " graus Fahrenheit.");
+    /*Desenvolva um algoritmo para ler dois valores e imprimir uma das
+três mensagens a seguir:
+  a. ‘Números iguais’, caso os números sejam iguais;
+  b. ‘Primeiro é maior’, caso o primeiro seja maior que o segundo;
+  c. ‘Segundo maior’, caso o segundo seja maior que o primeiro. */
+    
+    let num1 = 10;
+    let num2 = 20;
+
+  if (num1 === num2) {
+    console.log("Números iguais");
+  } else if (num1 > num2) {
+    console.log("Primeiro é maior");
+  } else {
+    console.log("Segundo é maior");
+  }
+    /*As maçãs desta estação custam R$0,30 se forem compradas
+menos do que uma dúzia, e R$0,25 se forem compradas pelo menos
+doze. Desenvolva um algoritmo que leia o número de maçãs
+compradas, calcule e escreva o valor total da compra. */
+    
+  let numMacas = 15;
+  let valorMaca = 0.30;
+  if (numMacas >= 12) {
+    valorMaca = 0.25;
+  }
+  let valorTotal = valorMaca * numMacas;
+  console.log("O valor total da compra é R$" + valorTotal);
+    
+      /* Escreva um algoritmo que tenha como valores de entradas o nome
+  e idade do usuário e imprima no terminal o nome e a quantidade de
+  letras que o nome possui, bem como a idade e o ano de nascimento
+  do usuário. Ex: “Nome: Pedro, 5 letras. Idade: 22 anos, nasceu em
+  2000”.*/
+      let nome = "Lucas";
+    let idade = 27;
+    let anoAtual = new Date().getFullYear();
+    let anoNascimento = anoAtual - idade;
+    console.log("Nome: " + nome + ", " + nome.length + " letras. Idade: " + idade + " anos, nasceu em " + anoNascimento);
+      /* Crie um algoritmo que armazene um número inteiro positivo, e gere
+  um alerta com as seguintes mensagens:
+  a. “Número é par!”, se o valor armazenado for par;
+  b. “Número é impar!”, se o valor armazenado for ímpar;*/
+    let numero = 15;
+  if (numero % 2 === 0) {
+    alert("Número é par!");
+  } else {
+    alert("Número é impar!");
+  }
+    /* Escreva um algoritmo que armazene o ano atual e o ano de
+nascimento de uma pessoa. Escrever uma mensagem no console
+que diga se ela poderá ou não votar este ano (não é necessário
+considerar o mês em que a pessoa nasceu).*/
+
+let anoAtual1 = 2023;
+  let anoNascimento1 = 1995;
+  let idade1 = anoAtual - anoNascimento;
+  if (idade >= 18) {
+    console.log("Pode votar este ano.");
+  } else {
+    console.log("Não pode votar este ano.");
+}
+
+    
+    </script>
+</body>
+</html>
